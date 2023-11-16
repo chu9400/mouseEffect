@@ -58,7 +58,6 @@ $(".mouseCont span").hover(
     }
 ```
 
-- 주목해야할 코드
-    mix-blend-mode: difference;
-    이 코드는 자신의 배경과 그 위의 요소의 배경을 혼합하는 디자인 효과를 줄 수 있음.
+- 주목해야할 코드 : mix-blend-mode: difference;
+- 이 코드는 자신의 배경과 그 위의 요소의 배경을 혼합하는 디자인 효과를 줄 수 있음.
     

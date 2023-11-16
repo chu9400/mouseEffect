@@ -22,7 +22,7 @@ $(".mouseCont span").hover(
 );
 
 ```        
-
+---
 
 ### 02. gsap 문법
 - duration 효과
@@ -40,6 +40,8 @@ $(".mouseCont span").hover(
         top: e.pageY - 15,
     });
 ```
+
+---
 
 ### 03. 마우스 커서 브랜딩 효과
 ```css

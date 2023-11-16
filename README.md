@@ -60,6 +60,46 @@ $(".mouseCont span").hover(
     }
 ```
 
-- 주목해야할 코드 : mix-blend-mode: difference;
+- 주목 코드 : mix-blend-mode: difference;
 - 이 코드는 자신의 배경과 그 위의 요소의 배경을 혼합하는 디자인 효과를 줄 수 있음.
     
+---
+
+### 04-01. 조명 효과
+
+```css
+    .cursor{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        background-image: url(./img/bg6.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+```
+
+- 주목 코드 : background-attachment: fixed;
+- 배경 이미지가 움직이지 않고 고정되게 하는 코드이다. 사용자가 페이지를 스크롤해도 배경 이미지는 움직이지 않고 화면에 고정된다.
+
+- 배경이미지가 뒤에 있는 디자인 효과를 줄 수 있다.
+
+---
+
+### 04-02 요소의 가로 세로값 구하는 법 javascript 고급편
+```javascript
+    const circle = cursor.getBoundingClientRect();
+    
+    gsap.to(cursor, {
+        duration:0.3,
+        left:e.pageX - circle.width/2,
+        top:e.pageY - circle.height/2,
+    });
+```
+getBoundingClientRect함수를 사용하여 출력해보면
+![Alt text](image.png)
+이런 값이 나온다.

@@ -101,5 +101,7 @@ $(".mouseCont span").hover(
     });
 ```
 getBoundingClientRect함수를 사용하여 출력해보면
+<br />
 ![Alt text](image.png)
+ <br />
 이런 값이 나온다.

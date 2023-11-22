@@ -105,3 +105,32 @@ getBoundingClientRect함수를 사용하여 출력해보면
 ![Alt text](image.png)
  <br />
 이런 값이 나온다.
+
+
+### 05 기준점을 정중앙으로 잡기
+```javascript
+    let standardX = window.innerWidth / 2 - e.pageX;
+    let standardY = window.innerHeight / 2 - e.pageY
+
+    gsap.to(".mImg img", {
+        x: standardX / 10,
+        y: standardY / 10,
+        duration:0.5,
+    })
+
+/*  
+    mouseEffect05-javascript.html 파일을 실행하여 마우스 커서를 정중앙에 놓으면 
+    좌측하단의 standardX ,Y 값이 0에 가깝게 나오는데 이 원리는 
+
+    전체 가로 값을 800이라 치고 "window.innerWidth / 2" 는 400이다.
+    마우스 커서를 "중앙"으로 오게하면 마우스 기준에서 마우스 좌표 값은 400이 된다. 
+    따라서 위의 코드 window.innerWidth / 2 - e.pageX; 
+                    400 - 400 이다.
+                    
+    그렇기 때문에 마우스를 최대한 정중앙으로 이동시키면 standardX,Y 값은 0, 0에 가깝게 된다.
+
+    그 후 최종적으로 이미지 요소의 x와 y 좌표 값에 마우스가 이동한 만큼 
+    값을 주면 너무 빨리 변하니 이동한 마우스 값의 /10 이나 /20으로 조금만
+    이동시키면 효과가 완성된다.
+*/
+```

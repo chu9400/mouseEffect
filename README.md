@@ -124,8 +124,8 @@ getBoundingClientRect함수를 사용하여 출력해보면
 
     전체 가로 값을 800이라 치고 "window.innerWidth / 2" 는 400이다.
     마우스 커서를 "중앙"으로 오게하면 마우스 기준에서 마우스 좌표 값은 400이 된다. 
-    따라서 위의 코드 window.innerWidth / 2 - e.pageX; 
-                    400 - 400 이다.
+    따라서 window.innerWidth / 2 - e.pageX; 이 코드는
+                            400 - 400 이다.
                     
     그렇기 때문에 마우스를 최대한 정중앙으로 이동시키면 standardX,Y 값은 0, 0에 가깝게 된다.
 
